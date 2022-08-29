@@ -17,7 +17,7 @@ jobs:
         with:
            registry: ghcr.io
            username: bharti2022
-           password: ${{secrets.REPO_TOKEN}}  
+           password: ${{secrets.REPO_TOKEN}}
       - name: docker build
         run: docker build . -t ghcr.io/bharti2022/sample-spring-app:latest
       - name: docker push  
