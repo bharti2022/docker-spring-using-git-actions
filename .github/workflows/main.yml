@@ -3,7 +3,7 @@ name: Github Action Examples of spring project
 on:
   push:
     branch:
-      - docker-image
+      - spring-actions
 
 jobs:
   build:
