@@ -1,10 +1,5 @@
 FROM openjdk:latest
-EXPOSE 8761
-ARG JAR_FILE=target/HelloWorld-0.0.1-SNAPSHOT.jar
-
-#ADD ${JAR_FILE} app.jar
-RUN ls ./target 
- 
-RUN mv ${JAR_FILE} /app.jar
-
-ENTRYPOINT ["java","-jar","/app.jar"]
+ADD target/HelloWorld-0.0.1-SNAPSHOT.jar /tmp
+WORKDIR /tmp
+EXPOSE 8080
+ENTRYPOINT ["java", "-jar", "HelloWorld-0.0.1-SNAPSHOT.jar"]
