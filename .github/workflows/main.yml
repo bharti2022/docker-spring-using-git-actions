@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: clone repository
         uses: actions/checkout@v2
+      - name: install mvn 
+        uses: mvn install           
       - name: login to github container registry
         uses: docker/login-action@v1
         with:
